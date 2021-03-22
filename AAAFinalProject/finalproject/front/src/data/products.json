@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Intensive course - Buongiorno!",
+    "duration": " 2 weeks (morning)",
+    "description": " 5 classes per week (50 min per class)",
+    "schedule": "Monday to Friday, 9.00 a.m.",
+    "price": "100.00",
+    "more": "You can start any Monday, within 1 months from purchase."
+  },
+
+  {
+    "name": "Intensive course - Buonasera!",
+    "duration": " 2 weeks (evening)",
+    "description": " 5 classes per week (50 min per class)",
+    "schedule": "Monday to Friday, 7.00 p.m.",
+    "price": "100.00",
+    "more": "You can start any Monday, within 1 months from purchase."
+  },
+
+  {
+    "name": "Part-time course - Buon Pranzo!",
+    "duration": " 4 weeks (lunch time)",
+    "description": " 3 classes per week (50 min per class)",
+    "schedule": "Monday-Wednesday-Friday, 1.00 p.m.",
+    "price": "120.00",
+    "more": "You can start any Monday, within 1 months from purchase."
+  },
+
+  {
+    "name": "Private classes",
+    "duration": " 5 classes",
+    "description": "Up to 3 classes per week (60 minutes per class), to be scheduled within 2 months from purchase.",
+    "schedule": "From Monday to Friday, at the arranged time.",
+    "price": "100.00",
+    "more": "You can decide which day and time suits you better, according to teachers availability."
+  },
+
+  {
+    "name": "Grammar",
+    "duration": " 5 classes (morning)",
+    "description": "Up to 2 classes per week (50 minutes per class)",
+    "schedule": "Tuesday and Thursday, 10.00 a.m.",
+    "price": "70.00",
+    "more": "You can start any Tuesday/Thursday, within 1 months from purchase."
+  },
+
+  {
+    "name": "Business",
+    "duration": " 4 weeks (lunch time)",
+    "description": "2 classes per week (50 min per class)",
+    "schedule": "Tuesday and Thursday, 1.00 p.m.",
+    "price": "70.00",
+    "more": "You can start any Tuesday/Thursday, within 1 months from purchase."
+  }
+]

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Query index{% endblock %}
+
+{% block body %}
+    <h1>Query index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for query in queries %}
+            <tr>
+                <td>{{ query.id }}</td>
+                <td>{{ query.name }}</td>
+                <td>{{ query.email }}</td>
+                <td>{{ query.message }}</td>
+                <td>
+                    <a href="{{ path('query_show', {'id': query.id}) }}">show</a>
+                    <a href="{{ path('query_edit', {'id': query.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('query_new') }}">Create new</a>
+{% endblock %}

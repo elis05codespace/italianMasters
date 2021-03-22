@@ -1,0 +1,33 @@
+[
+    {
+        "name" : "Serena Milani",
+        "description" : "Hello! My name is Serena, I am 22 years old, I'm a law student and I speak 5 languages (Italian, English, Spanish, Russian and Chinese). I have been teaching Italian since I graduated high school in 2017. My goal here is to help you learning my own language according to your personal time and learning needs.",
+        "image": "../images/24.jpg"
+    },
+
+    {
+        "name":"Elena Bianchi",
+        "description":"Hello! My name is Elena Bianchi, I'm graduated in French language and litterature, I am living in Italy.I have a great passion for foreign languages, history and litterature. I work with students of all ages and many nationalities. I make my lessons relevant to the students.",
+        "image": "../images/26.jpg"
+    },
+    {
+        "name":"Sergio De Amicis",
+        "description":"Dear students, my name is Sergio, I am a professor of literature and philosophy, I teach Italian language in high schools, and I collaborate with the University of Rome and Bologna. I have worked for several years at the Italian Cultural Institute in London.",
+        "image": "../images/94.jpg"
+    },
+    {
+        "name":"Sofia De Cecco",
+        "description":"Hello everybody, my name is Sofia, I teach Italian since 2005. Would you like to improve your accent, prepare an exam, improve your Italian for leisure or for work? I teach French too using the same methodology, learn and have fun!",
+        "image": "../images/32.jpg"
+    },
+    {
+        "name":"Giovanni Rossi",
+        "description":"I'm a native Italian teacher with over 7 years of experience. I specialize in conversation and pronunciation. I started tutoring my international classmates at university, where I studied International Relations. I can help you with exams, interviews, a trip abroad, a new job or just to improve your Italian. It is a beautiful language!",
+        "image": "../images/24.jpg"
+    },
+    {
+        "name":"Roberto Grandi",
+        "description":"Hy everyone, my name is Roberto, I'm 36 years old and I'm a professor of Italian language and literature. I've been working as a journalist and as a radio host for more than 10 years. But my true passion is the Italian language and I love to teach it to others.",
+        "image": "../images/34.jpg"
+    }
+]
