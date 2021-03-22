@@ -96,22 +96,24 @@ function App() {
         >
           <Navbar />
           <Sidebar />
-
-          <Route exact path="/" component={PageHome} />
-          <Route path="/login" component={PageLogin} />
-          <Route path="/register" component={PageRegister} />
-          <Route path="/faq" component={PageFaq} />
-          <Route path="/contactus" component={PageContactForm} />
-          <Route path="/courses" component={PageCourses} />
-          <Route path="/teachers" component={PageTeachers} />
-          <Route path="/workwithus" component={PageWorkWithUs} />
-          <Route path="/reviews" component={PageReviews} />
-          <Route path="/shop" component={PageShop} />
-          <Route path="/checkout" component={PageCheckout} />
-          <Route path="/mycourses" component={PagePrivateCourses} />
-          <Route path="/myoffers" component={PagePrivateOffers} />
-          <Route path="/coursesOnlyView" component={PageCoursesOnlyView} />
-          <ScrollArrow />
+          <div className="height100">
+            <Route exact path="/" component={PageHome} />
+            <Route exact path="/home" component={PageHome} />
+            <Route path="/login" component={PageLogin} />
+            <Route path="/register" component={PageRegister} />
+            <Route path="/faq" component={PageFaq} />
+            <Route path="/contactus" component={PageContactForm} />
+            <Route path="/courses" component={PageCourses} />
+            <Route path="/teachers" component={PageTeachers} />
+            <Route path="/workwithus" component={PageWorkWithUs} />
+            <Route path="/reviews" component={PageReviews} />
+            <Route path="/shop" component={PageShop} />
+            <Route path="/checkout" component={PageCheckout} />
+            <Route path="/mycourses" component={PagePrivateCourses} />
+            <Route path="/myoffers" component={PagePrivateOffers} />
+            <Route path="/coursesOnlyView" component={PageCoursesOnlyView} />
+            <ScrollArrow />
+          </div>
           <Footer />
         </GlobalContext.Provider>
       </BrowserRouter>
