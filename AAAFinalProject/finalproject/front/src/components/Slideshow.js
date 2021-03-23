@@ -8,7 +8,7 @@ const props = {
   duration: 5000,
   transitionDuration: 500,
   infinite: true,
-  indicators: true,
+  indicators: false,
   arrows: true,
 };
 
@@ -23,11 +23,11 @@ const Slideshow = () => {
     );
   });
   return (
-    <div className="container">
-      <div className="containerSlide">
-        <Slide {...props}>{reviewss}</Slide>
-      </div>
+    // <div className="container">
+    <div className="containerSlide">
+      <Slide {...props}>{reviewss}</Slide>
     </div>
+    // </div>
   );
 };
 

@@ -434,6 +434,7 @@ h3#myCourseName {
 
 .containerSlide img {
   height: 750px;
+  width: 100%;
   border: solid 2px lightgray;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.8);
 }
@@ -504,7 +505,6 @@ h4.titleReview:hover {
   background: linear-gradient(45deg, #fc00ff, #00dbde);
   border-radius: 2rem;
   padding: 40px 40px;
-  /* min-height: 60vh; */
   max-width: 60vw;
   border: 2px solid lightgray;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.8);
@@ -550,10 +550,6 @@ button:hover {
   border: 2px solid lightgray;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.8);
 }
-/* .itWorks:hover {
-  text-decoration: none !important;
-  pointer-events: none;
-} */
 
 div.submit-container {
   display: flex;
@@ -639,12 +635,6 @@ p.teacher-description:hover,
 /*---------TEACHERS COMPONENT------------------------------------*/
 
 .teachers-container {
-  /* background-color: #a64bf4;
-  background: -webkit-linear-gradient(45deg, #fc00ff, #00dbde);
-  background: -o-linear-gradient(45deg, #fc00ff, #00dbde);
-  background: -moz-linear-gradient(45deg, #fc00ff, #00dbde);
-  background: linear-gradient(45deg, #fc00ff, #00dbde); */
-
   background-color: #c98cff;
   background-image: linear-gradient(to right, #c98cff, #2fe6e9);
   border-radius: 2rem;
@@ -734,7 +724,6 @@ p.teacher-description:hover,
   color: var(--on-hover-purple);
   font-weight: bold;
   font-family: var(--title-font-family);
-  /* text-transform: uppercase; */
 }
 
 .courses-container h3:hover {
@@ -927,6 +916,15 @@ button.button-checkout:hover {
   color: rgb(36, 35, 35);
   font-size: 20px;
   font-family: var(--title-font-family);
+}
+
+.get-in-touch {
+  color: #00dbde;
+  cursor: pointer;
+}
+
+.get-in-touch:hover {
+  color: var(--on-hover-purple);
 }
 
 /*---------FOOTER------------------------------------*/

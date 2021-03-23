@@ -1,4 +1,3 @@
-import ModalButton from "./ModalButton";
 import { useHistory } from "react-router-dom";
 import { GlobalContext } from "../context/Context";
 import { useContext } from "react";
@@ -23,7 +22,7 @@ export default function Product({ product }) {
           <p>{product.description}</p>
           <p>{product.more}</p>
         </div>
-        {/* <ModalButton /> */}
+
         <button className="buyNow" onClick={handleCheckout}>
           Buy Now
         </button>
