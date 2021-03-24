@@ -26,34 +26,34 @@ export default function HomeComponent() {
       </div>
 
       <div className="top">
-        <div className="home-container elem-ToTop" onClick={goToCourses}>
+        {/* <div className="home-container elem-ToTop" onClick={goToCourses}>
           <p>I</p>
-          {/* <p>TO</p>
-          <p>ITALIAN MASTERS</p> */}
-        </div>
+          <p>TO</p>
+          <p>ITALIAN MASTERS</p>
+        </div> */}
 
-        <div className="home-container elem-ToTop" onClick={goToCourses}>
+        {/* <div className="home-container elem-ToTop" onClick={goToCourses}>
           <p>T</p>
-        </div>
+        </div> */}
       </div>
 
       <div className="bottom">
-        <div
+        {/*  <div
           className="home-container elem-ToLeft small"
           onClick={goToRegister}
         >
-          {/* <p>Sign up</p>
+          <p>Sign up</p>
           <p>to receive</p>
-          <p>more offers!</p> */}
-        </div>
-        <div
+          <p>more offers!</p>
+        </div> */}
+        {/* <div
           className="home-container elem-ToRight small"
           onClick={goToTeachers}
         >
-          {/* <p>Meet</p>
+          <p>Meet</p>
           <p>our</p>
-          <p>teachers!</p> */}
-        </div>
+          <p>teachers!</p>
+        </div> */}
       </div>
     </div>
   );

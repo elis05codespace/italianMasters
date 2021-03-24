@@ -28,7 +28,7 @@ export default function WorkWithUs() {
       .then((response) => response.json())
       .then((data) => {
         console.log("respuesta ok", data);
-        alert("Message successfully sent!");
+        alert("Data successfully sent!");
       })
       .catch((error) => console.log(error));
     history.push("/home");

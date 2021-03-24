@@ -42,15 +42,6 @@ export default function Navbar() {
         <h5 className="white signIn">Sign in / Sign up</h5>
       </NavLink>
 
-      {/* <NavLink
-        activeClassName="active"
-        className="links text-decoration-none ml-3"
-        exact
-        to="/register"
-      >
-        <h5 className="white">Sign up</h5>
-      </NavLink> */}
-
       <div className="collapse navbar-collapse white" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item mr-3">
