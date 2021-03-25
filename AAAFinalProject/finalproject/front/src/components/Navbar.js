@@ -18,7 +18,7 @@ export default function Navbar() {
 
       <NavLink
         activeClassName="active"
-        className="links text-decoration-none mr-5 ml-3"
+        className="links text-decoration-none mr-2 "
         exact
         to="/"
       >

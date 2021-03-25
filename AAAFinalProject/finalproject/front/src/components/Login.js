@@ -101,7 +101,9 @@ export default function Login() {
 
         <div className="submit-container">
           <button type="submit">Submit</button>
-          <button onClick={(e) => history.push("/home")}>x</button>
+          <button className="closing" onClick={(e) => history.push("/home")}>
+            x
+          </button>
         </div>
       </form>
     </div>

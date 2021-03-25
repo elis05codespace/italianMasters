@@ -16,7 +16,7 @@ export default function ProductOnlyView({ product }) {
         <h3 className="course-name">{product.name}</h3>
         <div className="course-details">
           <p>DURATION:{product.duration}</p>
-          <p>PRICE: €{product.price}</p>
+          <p>PRICE: € {Number(product.price).toFixed(2)}</p>
           <p>{product.description}</p>
           <p>{product.more}</p>
         </div>
