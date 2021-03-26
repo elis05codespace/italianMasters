@@ -394,11 +394,15 @@ ul.privateList li:hover {
   text-align: center;
   font-family: var(--title-font-family);
   color: #fc00ff;
+  text-shadow: -2px 3px 0 var(--white);
 }
 
-.myCourses h2:hover,
-h3#myCourseName:hover {
+.myCourses h2:hover {
   color: var(--on-hover-purple);
+}
+
+h3#myCourseName:hover {
+  color: #00dbde;
 }
 
 .myProducts-container {
@@ -421,6 +425,7 @@ h3#myCourseName:hover {
 h3#myCourseName {
   color: var(--white);
   font-family: var(--title-font-family);
+  text-shadow: -2px 3px 0 var(--black);
 }
 /*---------SLIDE---------------------------------------------------------*/
 
@@ -504,7 +509,7 @@ h4.titleReview:hover {
   background: linear-gradient(45deg, #fc00ff, #00dbde);
   border-radius: 2rem;
   padding: 40px 40px;
-  max-width: 60vw;
+  width: 60vw;
   border: 2px solid lightgray;
   box-shadow: 15px 5px 5px rgba(0, 0, 0, 0.8);
   margin-top: 100px;
@@ -556,11 +561,6 @@ div.submit-container {
   justify-content: space-between;
 }
 
-.register-container,
-.login-container {
-  margin-top: 50px;
-}
-
 .link-register {
   display: flex;
   flex-direction: row;
@@ -592,14 +592,13 @@ a.terms-link:hover {
   transform: scale(1.05);
 }
 
-@media screen and (max-width: 400px) {
-  div.login-container {
-    padding-left: 0;
-    padding-right: 0;
+@media (max-width: 700px) {
+  form.contact-form {
+    width: 90vw;
   }
 
-  button.closing {
-    display: none;
+  .myCourses {
+    width: 90vw;
   }
 }
 
@@ -877,7 +876,7 @@ button.button-checkout:hover {
   border-radius: 2rem;
   margin-top: 100px;
   min-height: 80vh;
-  width: 60vw;
+  width: 80vw;
   border: 2px solid lightgray;
   box-shadow: 15px 5px 5px rgba(0, 0, 0, 0.8);
   display: flex;
