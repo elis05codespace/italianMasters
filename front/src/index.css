@@ -305,8 +305,8 @@ nav h2.brand {
 }
 
 .nav-btn-white {
-  border: 2px solid var(--white) !important;
-  background-color: var(--white) !important;
+  border: 2px solid white !important;
+  background-color: white !important;
   margin-top: 20px;
   margin-bottom: 15px;
 }
