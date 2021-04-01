@@ -9,7 +9,7 @@ Web app where a user can buy Italian courses/classes paying with PayPal, send a 
 4. Grab the Client ID.
 5. Change the client id at the index.html to the client id of your PayPal app and set the correct currency:
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AaUhKHVcbIcuN3HhaGTKRPfAT-evjXKg6z5sgUpgk6OHNV7YsYCkdu4jQH7wpwVAkVlzRoSPwljNVqSl&currency=EUR"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=HereGoesYourClientId&currency=EUR"></script> 
 
 
 
