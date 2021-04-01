@@ -1,7 +1,7 @@
 # italianMasters
 
 
-1. Clone repo: git clone 
+1. Clone repo: git clone https://github.com/elis05codespace/italianMasters.git
 
 
 Back 
