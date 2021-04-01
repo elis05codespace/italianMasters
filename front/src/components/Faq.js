@@ -2,7 +2,6 @@ import Collapse from "./Collapse";
 import { GlobalContext } from "../context/Context";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
-// import faqs from "../data/faqs.json";
 
 export default function Faq() {
   const { faqs, setFaqs } = useContext(GlobalContext);

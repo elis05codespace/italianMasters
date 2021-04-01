@@ -23,8 +23,6 @@ export default function Navbar() {
         to="/"
       >
         <h2 className="white brand">
-          {/* <span className="logo">IM</span> */}
-
           <span className="italian">
             <HiOutlineAcademicCap size={40} className="logo2" />
             Italian{" "}

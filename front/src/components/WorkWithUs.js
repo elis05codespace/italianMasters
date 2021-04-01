@@ -47,7 +47,6 @@ export default function WorkWithUs() {
     setMore(evento.target.value);
   };
   const handleFile = (evento) => {
-    // console.log(evento.target.files);
     setCurriculum(evento.target.files[0]);
   };
 
@@ -103,18 +102,6 @@ export default function WorkWithUs() {
             onChange={handleEmail}
           />
         </div>
-
-        {/* <div className="mb-3 form-group">
-          <label for="phoneJobApplication" className="form-label">
-            * Phone number
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="phoneJobApplication"
-            placeholder="Enter your phone number"
-          />
-        </div> */}
 
         <div className="mb-3 form-group">
           <label htmlFor="addCVJobApplication" className="form-label">

@@ -1,5 +1,4 @@
 import CardTeacher from "./CardTeacher";
-// import teachersData from "../data/teachers.json";
 import { GlobalContext } from "../context/Context";
 import { useContext } from "react";
 

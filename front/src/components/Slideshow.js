@@ -1,4 +1,3 @@
-// import reviewsData from "../data/reviews.json";
 import SlideReviewDiv from "./SlideReviewDiv";
 import { Slide } from "react-slideshow-image";
 import { GlobalContext } from "../context/Context";
@@ -23,11 +22,9 @@ const Slideshow = () => {
     );
   });
   return (
-    // <div className="container">
     <div className="containerSlide">
       <Slide {...props}>{reviewss}</Slide>
     </div>
-    // </div>
   );
 };
 

@@ -22,11 +22,9 @@ import PageWorkWithUs from "./components/WorkWithUs";
 import ScrollArrow from "./components/ScrollArrow";
 import PageReviews from "./pages/PageReviews";
 import PageHome from "./pages/PageHome";
-import PageShop from "./pages/PageShop";
 import PageCheckout from "./pages/PageCheckout";
 import Sidebar from "./components/Sidebar";
 import PagePrivateCourses from "./pages/PagePrivatecourses";
-import PagePrivateOffers from "./pages/PagePrivateOffers";
 import { UrlServer } from "./context/UrlServer";
 import PageCoursesOnlyView from "./pages/PageCoursesOnlyView";
 
@@ -108,10 +106,8 @@ function App() {
             <Route path="/teachers" component={PageTeachers} />
             <Route path="/workwithus" component={PageWorkWithUs} />
             <Route path="/reviews" component={PageReviews} />
-            <Route path="/shop" component={PageShop} />
             <Route path="/checkout" component={PageCheckout} />
             <Route path="/mycourses" component={PagePrivateCourses} />
-            <Route path="/myoffers" component={PagePrivateOffers} />
             <Route path="/coursesOnlyView" component={PageCoursesOnlyView} />
             <ScrollArrow />
           </div>

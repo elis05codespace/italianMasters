@@ -1,6 +1,5 @@
-import { useRef, useEffect, useState, useContext } from "react";
+import { useRef, useEffect, useState } from "react";
 import { UrlServer } from "../context/UrlServer";
-import { GlobalContext } from "../context/Context";
 import { useHistory } from "react-router-dom";
 
 export default function Paypal({ course }) {
@@ -8,7 +7,6 @@ export default function Paypal({ course }) {
   const paypal = useRef();
   const [paidFor, setPaidFor] = useState(false);
   const [error, setError] = useState(null);
-  //const { myPurchase, setMyPurchase } = useContext(GlobalContext);
 
   let history = useHistory();
 
@@ -63,7 +61,6 @@ export default function Paypal({ course }) {
         console.log("respuesta ok", data);
       });
 
-    // aqui la peticion a symfony para que guarde los datos en la ddbb y luego en Mycursos hacer peticion get para que te devuelva los datos de los cursos comprados
     return (
       <div className="successDiv">
         <h1 id="paymentSuccessful" onClick={goToMycourses}>

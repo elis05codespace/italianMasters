@@ -20,10 +20,6 @@ export default function Sidebar() {
     history.push("/mycourses");
   };
 
-  const goToOffers = () => {
-    history.push("/myoffers");
-  };
-
   const handleLogout = (evento) => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
@@ -56,12 +52,6 @@ export default function Sidebar() {
           </div>
           <div className="privateLink">Orders</div>
         </li>
-        {/* <li onClick={goToOffers}>
-          <div className="privateIcon">
-            <MdNewReleases />
-          </div>
-          <div className="privateLink">Latest offers</div>
-        </li> */}
         <li onClick={handleLogout}>
           <div className="privateIcon">
             <IoMdLogOut />
