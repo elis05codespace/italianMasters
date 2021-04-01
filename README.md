@@ -7,7 +7,7 @@ Web app where a user can buy Italian courses/classes paying with PayPal, send a 
 2. As for PayPal you need to create a business account in the PayPal developer console(sandbox account).
 3. Create an application using that business account.
 4. Grab the Client ID.
-5. Change the client id at the index.html to the client id of your PayPal app and set the correct currency:
+5. Change the client id at the index.html to the client id of your PayPal app and set the correct currency (clientId&currency=EUR):
 
     <script src="https://www.paypal.com/sdk/js?client-id=HereGoesYourClientId&currency=EUR"></script> 
 
@@ -32,3 +32,7 @@ Web app where a user can buy Italian courses/classes paying with PayPal, send a 
 
 ## Built with:
 HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, REACT.JS, PHP, SYMFONY, DOCTRINE, MYSQL
+
+
+## Author
+elis05codespace
