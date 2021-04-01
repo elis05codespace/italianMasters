@@ -28,7 +28,7 @@ body {
   height: 100vh;
   position: relative;
   --title-font-family: "Berkshire Swash", cursive;
-  --title-font-family2: "Akaya Telivigala", cursive;
+  /* --title-font-family2: "Akaya Telivigala", cursive; */
   --font-family-p: "Dancing Script", cursive;
   --black: rgba(0, 0, 0, 0.8);
   --on-hover-purple: #7203d3;
@@ -250,8 +250,16 @@ nav.mainNavbar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  opacity: 0;
   transform: translateY(-30px);
   animation: apparition 0.4s 1.6s ease-out forwards;
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 nav.nav-background {
@@ -413,13 +421,17 @@ h3#myCourseName:hover {
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.8);
   padding: 20px 30px;
   text-align: center;
-  color: var(--on-hover-purple);
+  color: var(--white);
   background-color: #fc00ff;
   background-image: linear-gradient(to right, #fc00ff, #c98cff);
 }
 
+.myProducts-container p {
+  font-size: 22px;
+}
+
 .myProducts-container p:hover {
-  color: var(--white);
+  color: #00dbde;
 }
 
 h3#myCourseName {
@@ -564,7 +576,8 @@ div.submit-container {
 .link-register {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  /* justify-content: start; */
+
   padding-bottom: 20px;
   font-size: 20px;
   font-family: var(--title-font-family);
