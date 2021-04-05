@@ -26,7 +26,10 @@ export default function ContactForm() {
         console.log("respuesta ok", data);
         alert("Message successfully sent!");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        alert("Something went wrong, please try again");
+        history.push("/contactus");
+      });
     history.push("/home");
   };
 

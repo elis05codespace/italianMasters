@@ -14,7 +14,6 @@ export default function Login() {
 
   function usernamef(e) {
     username = e.target.value;
-    console.log("En la función usernamef: ", username);
   }
 
   function passwordf(e) {
@@ -46,6 +45,10 @@ export default function Login() {
         console.log(decoded);
         localStorage.setItem("user", decoded.username);
         setUser(decoded.username);
+      })
+      .catch((error) => {
+        alert("Incorrect email or password, please try again");
+        history.push("/login");
       });
     history.push("/home");
   }

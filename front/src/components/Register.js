@@ -46,6 +46,10 @@ export default function Register() {
       .then((response) => response.json())
       .then((data) => {
         console.log("respuesta ok", data);
+      })
+      .catch((error) => {
+        alert("Something went wrong, please try again");
+        history.push("/register");
       });
     history.push("/login");
   }

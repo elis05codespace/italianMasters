@@ -64,7 +64,7 @@ export default function Paypal({ course }) {
     return (
       <div className="successDiv">
         <h1 id="paymentSuccessful" onClick={goToMycourses}>
-          Payment successful!
+          PAYMENT SUCCESSFUL!
         </h1>
       </div>
     );

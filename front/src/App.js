@@ -1,4 +1,5 @@
 import { GlobalContext } from "./context/Context";
+import { UrlServer } from "./context/UrlServer";
 import {
   BrowserRouter,
   Route,
@@ -8,10 +9,12 @@ import {
 } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import "./App.css";
-
 import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import ScrollArrow from "./components/ScrollArrow";
 import Footer from "./components/Footer";
+
+import PageHome from "./pages/PageHome";
 import PageContactForm from "./pages/PageContactForm";
 import PageCourses from "./pages/PageCourses";
 import PageTeachers from "./pages/PageTeachers";
@@ -19,13 +22,9 @@ import PageFaq from "./pages/PageFaq";
 import PageLogin from "./pages/PageLogin";
 import PageRegister from "./pages/PageRegister";
 import PageWorkWithUs from "./components/WorkWithUs";
-import ScrollArrow from "./components/ScrollArrow";
 import PageReviews from "./pages/PageReviews";
-import PageHome from "./pages/PageHome";
 import PageCheckout from "./pages/PageCheckout";
-import Sidebar from "./components/Sidebar";
 import PagePrivateCourses from "./pages/PagePrivatecourses";
-import { UrlServer } from "./context/UrlServer";
 import PageCoursesOnlyView from "./pages/PageCoursesOnlyView";
 
 function App() {
@@ -72,7 +71,7 @@ function App() {
   }
 
   return (
-    <div className="App wrapper">
+    <div>
       <BrowserRouter>
         <ScrollToTop />
         <GlobalContext.Provider

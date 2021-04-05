@@ -30,7 +30,10 @@ export default function WorkWithUs() {
         console.log("respuesta ok", data);
         alert("Data successfully sent!");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        alert("Something went wrong, please try again");
+        history.push("/workwithus");
+      });
     history.push("/home");
   };
 

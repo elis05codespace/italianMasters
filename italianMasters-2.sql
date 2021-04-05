@@ -2,10 +2,10 @@
 -- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Mar 09, 2021 at 09:29 AM
--- Server version: 5.7.32
--- PHP Version: 7.4.12
+-- Servidor: localhost:8889
+-- Tiempo de generación: 05-04-2021 a las 09:19:14
+-- Versión del servidor: 5.7.32
+-- Versión de PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `italianMasters`
+-- Base de datos: `italianMasters`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctrine_migration_versions`
+-- Estructura de tabla para la tabla `candidate`
+--
+
+CREATE TABLE `candidate` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `curriculum` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `more` longtext COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `doctrine_migration_versions`
 --
 
 CREATE TABLE `doctrine_migration_versions` (
@@ -32,20 +47,10 @@ CREATE TABLE `doctrine_migration_versions` (
   `execution_time` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `doctrine_migration_versions`
---
-
-INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
-('DoctrineMigrations\\Version20210308092027', '2021-03-08 09:20:53', 175),
-('DoctrineMigrations\\Version20210308093614', '2021-03-08 09:36:29', 105),
-('DoctrineMigrations\\Version20210308093952', '2021-03-08 09:40:01', 151),
-('DoctrineMigrations\\Version20210309080839', '2021-03-09 08:08:53', 288);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faq`
+-- Estructura de tabla para la tabla `faq`
 --
 
 CREATE TABLE `faq` (
@@ -56,7 +61,7 @@ CREATE TABLE `faq` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `faq`
+-- Volcado de datos para la tabla `faq`
 --
 
 INSERT INTO `faq` (`id`, `question`, `answer`, `collapsed`) VALUES
@@ -64,12 +69,14 @@ INSERT INTO `faq` (`id`, `question`, `answer`, `collapsed`) VALUES
 (2, 'How many students are in the class?', 'The maximum number of students in each class is 10.', 0),
 (3, 'At what time can I take my lesson?', 'We offer a flexible schedule. Courses take place either in the morning or in the evening (some are also available at lunch time).', 0),
 (4, 'Will my skill level be available?', 'Yes, we organize Italian courses of all levels  (beginners, elementary, intermediate and advanced).', 0),
-(5, 'How do I find my Italian level?', 'You will take an online placement test. In addition you will be given a short interview. We ensure than you go straight into the right class for you!', 0);
+(5, 'How do I find my Italian level?', 'You will take an online placement test. In addition you will be given a short interview. We ensure than you go straight into the right class for you!', 0),
+(6, 'How can I buy a course?', 'You can buy directly by clicking on the course you want on the page Courses. ', 0),
+(7, 'What type of payment do you accept?', 'We accept PayPal, credit/debit card.', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Estructura de tabla para la tabla `product`
 --
 
 CREATE TABLE `product` (
@@ -78,14 +85,39 @@ CREATE TABLE `product` (
   `duration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `schedule` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` double NOT NULL,
   `more` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `duration`, `description`, `schedule`, `price`, `more`) VALUES
+(1, 'Intensive course - Buongiorno!', ' 2 weeks (morning)', '5 classes per week (50 min per class)', 'Monday to Friday, 9.00 a.m.', 100, 'You can start any Monday, within 1 months from purchase.'),
+(2, 'Intensive course - Buonasera!', ' 2 weeks (evening)', '5 classes per week (50 min per class)', 'Monday to Friday, 7.00 p.m.', 100, 'You can start any Monday, within 1 months from purchase.'),
+(3, 'Part-time course - Buon Pranzo!', ' 4 weeks (lunch time)', '3 classes per week (50 min per class)', 'Monday-Wednesday-Friday, 1.00 p.m.', 120, 'You can start any Monday, within 1 months from purchase.'),
+(4, 'Private classes', ' 5 classes', 'Up to 3 classes per week (60 minutes per class), to be scheduled within 2 months from purchase.', 'From Monday to Friday, at the arranged time.', 100, 'You can decide which day and time suits you better, according to teachers availability.'),
+(5, 'Grammar', ' 5 classes (morning)', 'Up to 2 classes per week (50 minutes per class)', 'Tuesday and Thursday, 10.00 a.m.', 70, 'You can start any Tuesday/Thursday, within 1 months from purchase.'),
+(6, 'Business', ' 4 weeks (lunch time)', '2 classes per week (50 min per class)', 'Tuesday and Thursday, 1.00 p.m.', 70, 'You can start any Tuesday/Thursday, within 1 months from purchase.');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `query`
+--
+
+CREATE TABLE `query` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` longtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `review`
+-- Estructura de tabla para la tabla `review`
 --
 
 CREATE TABLE `review` (
@@ -97,7 +129,7 @@ CREATE TABLE `review` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `review`
+-- Volcado de datos para la tabla `review`
 --
 
 INSERT INTO `review` (`id`, `review`, `name`, `country`, `image`) VALUES
@@ -115,7 +147,7 @@ INSERT INTO `review` (`id`, `review`, `name`, `country`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `teacher`
+-- Estructura de tabla para la tabla `teacher`
 --
 
 CREATE TABLE `teacher` (
@@ -126,7 +158,7 @@ CREATE TABLE `teacher` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `teacher`
+-- Volcado de datos para la tabla `teacher`
 --
 
 INSERT INTO `teacher` (`id`, `name`, `image`, `description`) VALUES
@@ -140,7 +172,7 @@ INSERT INTO `teacher` (`id`, `name`, `image`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Estructura de tabla para la tabla `user`
 --
 
 CREATE TABLE `user` (
@@ -152,10 +184,18 @@ CREATE TABLE `user` (
   `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `roles`, `password`, `first_name`, `last_name`) VALUES
+(1, 'eli@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$hU2o1yHqkVCemBL/pR/tZ.tJ5cLkDVj4Jq9sCxJAWS.bul/Ra2AOm', 'Elisa', 'Forpresident\r\n'),
+(2, 'second@gmail.com', '[]', '$2y$13$hU2o1yHqkVCemBL/pR/tZ.tJ5cLkDVj4Jq9sCxJAWS.bul/Ra2AOm', 'John', 'Doe');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_product`
+-- Estructura de tabla para la tabla `user_product`
 --
 
 CREATE TABLE `user_product` (
@@ -164,48 +204,67 @@ CREATE TABLE `user_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Indexes for dumped tables
+-- Volcado de datos para la tabla `user_product`
+--
+
+INSERT INTO `user_product` (`user_id`, `product_id`) VALUES
+(1, 1);
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `doctrine_migration_versions`
+-- Indices de la tabla `candidate`
+--
+ALTER TABLE `candidate`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `doctrine_migration_versions`
 --
 ALTER TABLE `doctrine_migration_versions`
   ADD PRIMARY KEY (`version`);
 
 --
--- Indexes for table `faq`
+-- Indices de la tabla `faq`
 --
 ALTER TABLE `faq`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `product`
+-- Indices de la tabla `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `review`
+-- Indices de la tabla `query`
+--
+ALTER TABLE `query`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `review`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `teacher`
+-- Indices de la tabla `teacher`
 --
 ALTER TABLE `teacher`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indices de la tabla `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`);
 
 --
--- Indexes for table `user_product`
+-- Indices de la tabla `user_product`
 --
 ALTER TABLE `user_product`
   ADD PRIMARY KEY (`user_id`,`product_id`),
@@ -213,45 +272,57 @@ ALTER TABLE `user_product`
   ADD KEY `IDX_8B471AA74584665A` (`product_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `faq`
+-- AUTO_INCREMENT de la tabla `candidate`
+--
+ALTER TABLE `candidate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT de la tabla `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `review`
+-- AUTO_INCREMENT de la tabla `query`
+--
+ALTER TABLE `query`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `review`
 --
 ALTER TABLE `review`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `teacher`
+-- AUTO_INCREMENT de la tabla `teacher`
 --
 ALTER TABLE `teacher`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `user_product`
+-- Filtros para la tabla `user_product`
 --
 ALTER TABLE `user_product`
   ADD CONSTRAINT `FK_8B471AA74584665A` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
