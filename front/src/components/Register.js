@@ -12,7 +12,6 @@ export default function Register() {
 
   function usernamef(e) {
     username = e.target.value;
-    console.log("En la función usernamef: ", username);
   }
 
   function passwordf(e) {
@@ -21,12 +20,10 @@ export default function Register() {
 
   function firstNamef(e) {
     firstName = e.target.value;
-    console.log("En la función usernamef: ", firstName);
   }
 
   function lastNamef(e) {
     lastName = e.target.value;
-    console.log("En la función usernamef: ", lastName);
   }
 
   function handleRegister(e) {

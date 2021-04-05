@@ -42,13 +42,10 @@ class CandidateController extends AbstractController
 
 
         $directorio= $this->getParameter('curriculum');
-        // $nombreFichero = 'contacto.jpeg';
-        // $nombreFichero = $foto->getClientOriginalName();
-         $nombreFichero = 'candidate'.$id.'.'.$curriculum->getClientOriginalExtension();
+        $nombreFichero = 'candidate'.$id.'.'.$curriculum->getClientOriginalExtension();
          
         $curriculum->move($directorio, $nombreFichero);
 
-        // dump($curriculum);
         $candidate->setCurriculum($nombreFichero);
 
         $em->persist($candidate);

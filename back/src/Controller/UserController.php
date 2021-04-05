@@ -52,7 +52,7 @@ class UserController extends AbstractController
         $em->flush();
 
 
-        return $this->json(["message" => "registration succesful"]);
+        return $this->json(["message" => "registration successful"]);
     }
 
      /**

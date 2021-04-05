@@ -1,9 +1,7 @@
 import { GlobalContext } from "../context/Context";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { HiUserCircle } from "react-icons/hi";
 import { FaGraduationCap, FaShoppingCart } from "react-icons/fa";
-import { MdNewReleases } from "react-icons/md";
 import { IoMdLogOut } from "react-icons/io";
 
 export default function Sidebar() {
@@ -29,17 +27,7 @@ export default function Sidebar() {
 
   return (
     <div className={`sidebar ${sidebarClass}`}>
-      {/* <div className="usernameDiv">
-        <HiUserCircle />
-      </div>
-      <div className="privateLink">{localStorage.getItem("user")}</div> */}
       <ul className="privateList">
-        {/* <li id="noHover">
-          <div className="privateIcon">
-            <HiUserCircle />
-          </div>
-          <div className="privateLink">{localStorage.getItem("user")}</div>
-        </li> */}
         <li onClick={goToBuycourses}>
           <div className="privateIcon">
             <FaShoppingCart />

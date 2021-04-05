@@ -1,6 +1,4 @@
 export default function Collapse({ faq, index }) {
-
-
   return (
     <div>
       <p>
@@ -11,7 +9,6 @@ export default function Collapse({ faq, index }) {
           data-target={"#collapseExample" + index}
           aria-expanded="false"
           aria-controls="collapseExample"
-          
         >
           {faq.question}
         </button>
