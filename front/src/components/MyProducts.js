@@ -6,7 +6,7 @@ export default function MyProducts({ course }) {
       </h3>
       <div className="course-details">
         <p>DURATION:{course.duration}</p>
-        <p>PRICE: €{course.price}</p>
+        <p>PRICE: € {Number(course.price).toFixed(2)}</p>
         <p>{course.description}</p>
         <p className="mb-4">{course.more}</p>
       </div>
