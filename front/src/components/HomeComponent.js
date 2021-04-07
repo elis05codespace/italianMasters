@@ -1,20 +1,4 @@
-import { useHistory } from "react-router-dom";
-
 export default function HomeComponent() {
-  let history = useHistory();
-
-  function goToCourses() {
-    history.push("/coursesOnlyView");
-  }
-
-  function goToRegister() {
-    history.push("/register");
-  }
-
-  function goToTeachers() {
-    history.push("/teachers");
-  }
-
   return (
     <div>
       <div className="block">

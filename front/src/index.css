@@ -475,8 +475,6 @@ a.terms-link:hover {
 
 .teacher-card {
   width: 25rem;
-
-  /*original bootstrap card*/
   background: #a64bf4;
   background: -webkit-linear-gradient(45deg, #fc00ff, #00dbde);
   background: -o-linear-gradient(45deg, #fc00ff, #00dbde);
